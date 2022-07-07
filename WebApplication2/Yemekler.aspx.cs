@@ -17,8 +17,8 @@ namespace WebApplication2
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            Panel2.Visible = false;
-            Panel4.Visible = false;
+            Panel2.Visible = true;
+            Panel4.Visible = true;
 
             if (Page.IsPostBack == false)
             {

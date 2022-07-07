@@ -56,5 +56,19 @@ namespace WebApplication2
             komut.ExecuteNonQuery();
             bgl.baglanti().Close(); 
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            //tüm yemekleri false yaptık
+            SqlCommand komut = new SqlCommand("update tbl_yemekler set durum=0", bgl.baglanti());
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+
+            //günün yemeği için id ye göre true yapalım
+            SqlCommand komut2 = new SqlCommand("update tbl_yemekler set durum=1 where yemekid=@p1", bgl.baglanti());
+            komut2.Parameters.AddWithValue("@p1", id);
+            komut2.ExecuteNonQuery();
+            bgl.baglanti().Close();
+        }
     }
 }

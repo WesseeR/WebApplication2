@@ -36,8 +36,8 @@ namespace WebApplication2
                 bgl.baglanti().Close();
             }
 
-            Panel2.Visible = false;
-            Panel4.Visible = false;
+            Panel2.Visible = true;
+            Panel4.Visible = true;
         }
 
         protected void Button1_Click(object sender, EventArgs e)

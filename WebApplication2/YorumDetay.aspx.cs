@@ -19,7 +19,7 @@ namespace WebApplication2
             if (Page.IsPostBack == false)
             {
                 
-                SqlCommand komut = new SqlCommand("Select YorumAdSoyad,YorumMail,Yorumicerik,YemekAd From tbl_yorumlar innerjoin tbl_yemekler on tbl_yorumlar.yemekid=tbl_yemekler.yemekid where yorumid=@p1", bgl.baglanti());
+                SqlCommand komut = new SqlCommand("Select Y.YorumAdSoyad, Y.YorumMail, Y.Yorumicerik, YE.YemekAd FROM Tbl_Yorumlar AS Y JOIN Tbl_Yemekler AS YE ON Y.Yemekid = YE.Yemekid where Y.Yorumid=@p1", bgl.baglanti());
                 komut.Parameters.AddWithValue("@p1", id);
                 SqlDataReader dr = komut.ExecuteReader();
                 while (dr.Read())
@@ -38,7 +38,7 @@ namespace WebApplication2
         {
             SqlCommand komut = new SqlCommand("Update tbl_yorumlar set yorumicerik=@p1,yorumonay=@p2 where yorumid=@p3", bgl.baglanti());
             komut.Parameters.AddWithValue("@p1", Txticerik.Text);
-            komut.Parameters.AddWithValue("@p2", "True");
+            komut.Parameters.AddWithValue("@p2", 1);
             komut.Parameters.AddWithValue("@p3", id);
             komut.ExecuteNonQuery();
             bgl.baglanti().Close();

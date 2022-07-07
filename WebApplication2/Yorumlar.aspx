@@ -53,7 +53,7 @@
                                 <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/ikonlar/delete.png" Width="30px" />
                                 </a></td>
                             <td class="auto-style7">
-                              <a href="YorumDetay.aspx?Yorumid=<%# Eval("Yorumid") %>" ><asp:Image ID="Image3" runat="server" Height="30px" ImageUrl="~/ikonlar/png-transparent-green-check-illustration-check-mark-checkbox-yes-miscellaneous-angle-hand-thumbnail.png" Width="30px" /></a></td>
+                             </td>
                                 
                         </tr>
                     </table>

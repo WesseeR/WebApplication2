@@ -59,8 +59,14 @@
         <tr>
             <td class="auto-style8">&nbsp;</td>
             <td class="auto-style10"><strong>
-                <asp:Button ID="Button2" runat="server" CssClass="auto-style9" Height="50px" OnClick="Button2_Click" Text="Güncelle" Width="100px" />
+                <asp:Button ID="Button2" runat="server" CssClass="auto-style9" Height="25px" OnClick="Button2_Click" Text="Güncelle" Width="150px" />
                 </strong></td>
+        </tr>
+        <tr>
+            <td class="auto-style8">&nbsp;</td>
+            <td class="auto-style10">
+                <asp:Button ID="Button3" runat="server" Height="25px" OnClick="Button3_Click" Text="günün yemeğini seç" Width="150px" />
+            </td>
         </tr>
     </table>
 </asp:Content>

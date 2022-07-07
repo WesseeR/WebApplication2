@@ -118,5 +118,5 @@
                 <td class="auto-style11" style="margin-left: 80px; text-align: center;">&nbsp;</td>
             </tr>
         </table>
-    </asp:Panel>
+</asp:Panel>
 </asp:Content>
